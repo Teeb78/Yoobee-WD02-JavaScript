@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WD02 JavaScript List</title>
+    <body bgcolor="#A9F1DF"></body>
+    <script>
+        // Function that will add a new list item
+        function addItem() {
+            // Gets the input from the text box
+            var itemText = document.getElementById("itemInput").value;
+
+            // Creates an element for new list item 
+            var listItem = document.createElement("li");
+
+            // Sets the text content of the list item
+            listItem.textContent = itemText;
+
+            // Gets the unordered list element
+            var list = document.getElementById("itemList");
+
+            // Adds the new list item to the unordered list
+            list.appendChild(listItem);
+
+            // Clears the text box ready for the next input
+            document.getElementById("itemInput").value = "";
+        }
+    </script>
+</head>
+<body>
+    <!-- Title and information about what user should do -->
+    <h1>Make a List</h1>
+    <p>Click 'Add' to put items on the list.</p>
+    
+    <!-- Text box and Add button -->
+    <input type="text" id="itemInput" placeholder="Item">
+    <button onclick="addItem()">Add</button>
+    
+    <!-- The created list -->
+    <ul id="itemList"></ul>
+
+</body>
+</html>
